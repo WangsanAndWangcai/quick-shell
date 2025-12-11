@@ -58,7 +58,7 @@ export class QuickShellProvider {
                 }
             }
             
-            this.shellExecutor.execute(command.command, workingDirectory);
+            this.shellExecutor.execute(command.command, workingDirectory||'.');
         } catch (error) {
             vscode.window.showErrorMessage(`Failed to execute command "${command.label}": ${error}`);
         }

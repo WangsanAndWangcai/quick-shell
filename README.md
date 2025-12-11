@@ -1,7 +1,5 @@
 # Quick Shell
 
-![Quick Shell Logo](HugeiconsBash.svg)
-
 一个强大的 VS Code 扩展，让你能够快速执行预定义的 Shell 命令，支持自定义工作目录和配置文件管理。
 
 ## 🚀 功能特性

@@ -25,14 +25,19 @@ export class ConfigLoader {
             throw new Error('No workspace folder found');
         }
 
-        if (!fs.existsSync(configPath)) {
-            throw new Error(`Config file not found: ${configPath}`);
-        }
-
         try {
-            const configContent = fs.readFileSync(configPath, 'utf8');
+            let configContent: string;
+            
+            if (fs.existsSync(configPath)) {
+                configContent = fs.readFileSync(configPath, 'utf8');
+                this.configFilePath = configPath;
+            } else {
+                // 使用默认的 @quick-shell.yaml 配置
+                configContent = this.getDefaultConfig();
+                this.configFilePath = '@quick-shell.yaml (default)';
+            }
+            
             this.config = yaml.load(configContent) as QuickShellConfig;
-            this.configFilePath = configPath;
             
             if (!this.config.commands || !Array.isArray(this.config.commands)) {
                 throw new Error('Invalid config format: commands array is required');
@@ -40,7 +45,7 @@ export class ConfigLoader {
 
             return this.config;
         } catch (error) {
-            throw new Error(`Failed to load config from ${configPath}: ${error}`);
+            throw new Error(`Failed to load config: ${error}`);
         }
     }
 
@@ -82,5 +87,18 @@ export class ConfigLoader {
         }
 
         return workspaceFolders[0].uri.fsPath;
+    }
+
+    private getDefaultConfig(): string {
+        return "commands:\n" +
+               "  - label: \"Hello\"\n" +
+               "    path: \".\"\n" +
+               "    command: \"echo hello\"\n" +
+               "  - label: \"World\"\n" +
+               "    path: \".\"\n" +
+               "    command: \"echo world\"\n" +
+               "  - label: \"Hello World\"\n" +
+               "    path: \".\"\n" +
+               "    command: \"echo \\\"hello world\\\"\"";
     }
 }

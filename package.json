@@ -3,7 +3,7 @@
   "displayName": "Quick Shell",
   "description": "快速执行预定义的Shell命令，支持自定义工作目录和配置文件",
   "version": "0.0.1",
-  "icon": "HugeiconsBash.svg",
+  "icon": "icons/1.png",
   "publisher": "Health Wang",
   "repository": {
     "type": "git",
@@ -63,17 +63,19 @@
     "test": "vscode-test"
   },
   "devDependencies": {
-    "@types/vscode": "^1.107.0",
+    "@types/js-yaml": "^4.0.9",
     "@types/mocha": "^10.0.10",
     "@types/node": "22.x",
-    "typescript-eslint": "^8.48.1",
-    "eslint": "^9.39.1",
-    "typescript": "^5.9.3",
-    "ts-loader": "^9.5.4",
-    "webpack": "^5.103.0",
-    "webpack-cli": "^6.0.1",
+    "@types/vscode": "^1.90.0",
     "@vscode/test-cli": "^0.0.12",
-    "@vscode/test-electron": "^2.5.2"
+    "@vscode/test-electron": "^2.5.2",
+    "eslint": "^9.39.1",
+    "ts-loader": "^9.5.4",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.48.1",
+    "vsce": "^2.15.0",
+    "webpack": "^5.103.0",
+    "webpack-cli": "^6.0.1"
   },
   "dependencies": {
     "js-yaml": "^4.1.1"
