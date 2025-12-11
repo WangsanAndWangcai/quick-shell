@@ -4,7 +4,7 @@
   "description": "快速执行预定义的Shell命令，支持自定义工作目录和配置文件",
   "version": "0.0.1",
   "icon": "icons/1.png",
-  "publisher": "Health Wang",
+  "publisher": "wangcaiandwangsan",
   "repository": {
     "type": "git",
     "url": "https://github.com/WangsanAndWangcai/quick-shell"
