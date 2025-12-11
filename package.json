@@ -4,10 +4,10 @@
   "description": "快速执行预定义的Shell命令，支持自定义工作目录和配置文件",
   "version": "0.0.1",
   "icon": "HugeiconsBash.svg",
-  "publisher": "your-publisher-name",
+  "publisher": "Health Wang",
   "repository": {
     "type": "git",
-    "url": "https://github.com/your-username/quick-shell"
+    "url": "https://github.com/WangsanAndWangcai/quick-shell"
   },
   "keywords": [
     "shell",
