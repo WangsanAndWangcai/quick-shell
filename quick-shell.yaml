@@ -1,0 +1,10 @@
+commands:
+  - label: "Hello"
+    path: "."
+    command: "echo hello"
+  - label: "World"
+    path: "."
+    command: "echo world"
+  - label: "Hello World"
+    path: "."
+    command: "echo \"hello world\""
